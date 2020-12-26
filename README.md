@@ -22,11 +22,17 @@ Nie testowałem na innych kamerach
 ## Co potrzebne:
 
 omxplayer
+
 wiringpi - gpio do odczytu przycisków zmiany kanału
+
 screen
+
 sed
+
 awk
+
 fbset
+
 socat
 
 

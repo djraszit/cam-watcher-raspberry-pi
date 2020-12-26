@@ -1,0 +1,23 @@
+[Unit]
+Description=Display camera service.
+After=networking.service dbus.service
+
+[Service]
+Type=forking
+ExecStart=/home/pi/display-cameras/display-cameras.sh start %i
+ExecStop=/home/pi/display-cameras/display-cameras.sh stop %i
+#BusName=org.mpris.MediaPlayer2.omxplayer.%i
+Restart=always
+RestartSec=3
+User=root
+Group=root
+StartLimitBurst=0
+TimeoutStartSec=15
+StandardOutput=tty
+TTYPath=/dev/tty0
+RemainAfterExit=no
+Nice=-5
+
+[Install]
+WantedBy=multi-user.target
+

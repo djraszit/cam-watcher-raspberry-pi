@@ -1,0 +1,15 @@
+[Unit]
+Description=Cam Switcher
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/home/pi/display-cameras/cam-switcher.sh
+Restart=always
+RemainAfterExit=no
+RestartSec=5
+
+
+[Install]
+WantedBy=multi-user.target
+

@@ -52,6 +52,7 @@ if [ -z $NOREFRESH ] || [ "$NOREFRESH" == "0" ]; then
     fi
 fi
 
+#BEGIN MODIFIED BY RASZIT
 DBUS_CMD="dbus-daemon --fork --print-address 5 --print-pid 6 --session"
 OMXPLAYER_DBUS_ADDR="/tmp/omxplayerdbus.$CHANNEL.${USER:-root}"
 OMXPLAYER_DBUS_PID="/tmp/omxplayerdbus.$CHANNEL.${USER:-root}.pid"
@@ -66,6 +67,7 @@ if [ ! -s "$OMXPLAYER_DBUS_PID" ] || ! pgrep -f "$DBUS_CMD" -F "$OMXPLAYER_DBUS_
 		sleep .2
 	done
 fi
+#END MODIFIED BY RASZIT
 
 DBUS_SESSION_BUS_ADDRESS=`cat $OMXPLAYER_DBUS_ADDR`
 DBUS_SESSION_BUS_PID=`cat $OMXPLAYER_DBUS_PID`

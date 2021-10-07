@@ -97,7 +97,7 @@ echo "Camera Display Ended"
 
 
 *) 
-echo "Usage: displaycameras {start|stop} ch1" 
+echo "Usage: display-cameras.sh {start|stop} ch1" 
 exit 1
 
 ;; 

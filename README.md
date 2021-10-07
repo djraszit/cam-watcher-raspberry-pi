@@ -41,6 +41,22 @@ socat
 2. Zmiana wyświetlanego kanału przez socket (TCP port 8001)
 3. Wszystko w jednym slice
 
+## Jak to zainstalować
+
+Po prostu uruchamiamy w terminalu, może być przez ssh
+
+./install.sh
+
+Domyślnie instaluje się w /home/pi/cam-watcher + niektóre skrypty w /etc/systemd/system
+
+Edytujemy plik display-cameras.sh
+
+linijki zaczynające się na ch_urls zawierają adresy rtsp do strumieni z kamer
+
+Jeśli nie chcemy korzystać z przycisków do zmiany kanału to po instalacji w terminalu:
+
+systemctl stop cam-switcher.service
+systemctl disable cam-switcher.service
 
 
 

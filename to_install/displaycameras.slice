@@ -1,0 +1,10 @@
+[Unit]
+Description=Display cameras slice
+Before=slices.target
+
+[Slice]
+CPUAccounting=yes
+CPUWeight=500
+MemoryAccounting=yes
+MemoryMax=10%
+

@@ -63,7 +63,10 @@ done
 
 
 SYSTEMD_DIR=/etc/systemd/system
-SCRIPTS=("display-camera@.service")
+SCRIPTS=("displaycameras.slice")
+SCRIPTS+=("display-camera@.service")
+SCRIPTS+=("display-cameras-restart.service")
+SCRIPTS+=("display-cameras-restart.timer")
 SCRIPTS+=("cam-switcher.service")
 SCRIPTS+=("socket-cam-switcher@.service")
 SCRIPTS+=("socket-cam-switcher.socket")
@@ -110,3 +113,5 @@ sudo systemctl start display-camera@ch3.service
 
 sudo systemctl enable display-camera@ch4.service
 sudo systemctl start display-camera@ch4.service
+
+sudo systemctl enable display-cameras-restart.timer

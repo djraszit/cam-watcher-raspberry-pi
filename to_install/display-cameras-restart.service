@@ -1,0 +1,7 @@
+[Unit]
+Description=Display cameras daily restart
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart display-camera@ch*
+

@@ -3,9 +3,10 @@ Description=Display camera service.
 After=networking.service dbus.service
 
 [Service]
+Slice=displaycameras.slice
 Type=forking
-ExecStart=/home/pi/display-cameras/display-cameras.sh start %i
-ExecStop=/home/pi/display-cameras/display-cameras.sh stop %i
+ExecStart=/home/pi/cam-watcher/display-cameras.sh start %i
+ExecStop=/home/pi/cam-watcher/display-cameras.sh stop %i
 #BusName=org.mpris.MediaPlayer2.omxplayer.%i
 Restart=always
 RestartSec=3

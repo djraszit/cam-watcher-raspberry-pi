@@ -35,7 +35,12 @@ fbset
 
 socat
 
+## Dodałem kilka nowych funkcji
 
-Proszę pisać wiadomości, co można by ulepszyć
+1. Restart automatyczny o 00:00
+2. Zmiana wyświetlanego kanału przez socket (TCP port 8001)
+3. Wszystko w jednym slice
+
+
 
 

@@ -20,8 +20,9 @@ gpio -g mode $dec_btn input
 gpio -g mode $dec_btn up
 
 send="0 5 40 ${chname[0]}!\n960 5 40 ${chname[1]}!\n0 548 40 ${chname[2]}!\n960 548 40 ${chname[3]}!\n"
-echo -e "$send" > /tmp/hello_font_server
-echo -e "$send" | socat STDIO UNIX-CONNECT:/tmp/hello_font_by_raszit,connect-timeout=1
+if [ -e /tmp/hello_font_by_raszit ]; then
+	echo -e "$send" | socat STDIO UNIX-CONNECT:/tmp/hello_font_by_raszit,connect-timeout=1
+fi
 
 
 cam_switcher(){
@@ -123,8 +124,10 @@ cam_layer_switcher(){
 			fi
 
 			echo "$text" > $DIR/cam_num
-			echo -e "$send" > /tmp/hello_font_server
-			echo -e "$send" | socat STDIO UNIX-CONNECT:/tmp/hello_font_by_raszit,connect-timeout=1
+
+			if [ -e /tmp/hello_font_by_raszit ]; then
+				echo -e "$send" | socat STDIO UNIX-CONNECT:/tmp/hello_font_by_raszit,connect-timeout=1
+			fi
 		fi
 
 		sleep 0.1;

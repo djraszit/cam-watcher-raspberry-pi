@@ -1,0 +1,12 @@
+[Unit]
+Description=Service for change channel in cam-watcher
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/cam-wathcer/socket-cam-switcher.sh
+StandardInput=socket
+
+[Install]
+WantedBy=multi-user.target
+

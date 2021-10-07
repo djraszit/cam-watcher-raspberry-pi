@@ -2,7 +2,7 @@
 
 echo "Instalator skryptów do wyświetlania kamer na monitorze lub tv"
 
-INST_DIR=/home/pi/cam-wathcer
+INST_DIR=/home/pi/cam-watcher
 
 OMXPLAYER=
 

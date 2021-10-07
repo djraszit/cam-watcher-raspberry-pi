@@ -56,6 +56,7 @@ linijki zaczynające się na ch_urls zawierają adresy rtsp do strumieni z kamer
 Jeśli nie chcemy korzystać z przycisków do zmiany kanału to po instalacji w terminalu:
 
 systemctl stop cam-switcher.service
+
 systemctl disable cam-switcher.service
 
 

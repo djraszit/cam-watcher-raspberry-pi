@@ -86,8 +86,10 @@ while read -d . SOCKET; do
 	fi
 
 	echo "$text" > $DIR/cam_num
-	echo -e "$send" > /tmp/hello_font_server
-	echo -e "$send" | socat STDIO UNIX-CONNECT:/tmp/hello_font_by_raszit,connect-timeout=1
+	if [ -e /tmp/hello_font_server ]; then
+		echo -e "$send" > /tmp/hello_font_server
+		echo -e "$send" | socat STDIO UNIX-CONNECT:/tmp/hello_font_by_raszit,connect-timeout=1
+	fi
 
 done
 

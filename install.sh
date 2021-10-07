@@ -50,7 +50,8 @@ else
 fi
 
 #pliki do skopiowania
-FILES=(display-cameras.sh cam-switcher.sh cam_position_src.sh omxplayer-dbus-control.sh socket-cam-switcher.sh cam_num)
+FILES=(display-cameras.sh cam-switcher.sh cam_position_src.sh omxplayer-dbus-control.sh \
+								channel_names socket-cam-switcher.sh cam_num)
 
 for i in ${FILES[@]};do
 	if [ -e $INSTALL_DIR/$i ];then

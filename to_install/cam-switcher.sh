@@ -4,11 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null 2>&1 && pwd )"
 
 cam_num_file="$DIR/cam_num"
 source $DIR/cam_position_src.sh
-
-chname=("Front")
-chname+=("Back")
-chname+=("Brama")
-chname+=("Balkon")
+source $DIR/channel_names
 
 #piny gpio do zmiany wyświetlanego kanału
 inc_btn=21

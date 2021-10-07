@@ -11,8 +11,6 @@ chname+=("Brama")
 chname+=("Balkon")
 
 
-
-
 cam_on_top=0
 cam_num=4
 
@@ -41,7 +39,23 @@ while read -d . SOCKET; do
 			cam_on_top=$cam_num
 		fi
 		;;
-
+		cam1)
+			cam_on_top=1
+		;;
+		cam2)
+			cam_on_top=2
+		;;
+		cam3)
+			cam_on_top=3
+		;;
+		cam4)
+			cam_on_top=4
+		;;
+		allcam)
+			cam_on_top=0
+		;;
+		*)
+		;;
 	esac
 
 	if [ $cam_on_top -gt 0 ];then

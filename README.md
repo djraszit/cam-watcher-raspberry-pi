@@ -45,7 +45,9 @@ socat
 
 Po prostu uruchamiamy w terminalu, może być przez ssh
 
+'''bash
 ./install.sh
+'''
 
 Domyślnie instaluje się w /home/pi/cam-watcher + niektóre skrypty w /etc/systemd/system
 
